@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+---
+
+This package (wolfsocket) is a modified fork of Baileys (https://github.com/WhiskeySockets/Baileys),
+used and redistributed under the MIT License above. The original copyright notice
+is preserved unmodified as required.
+
+Portions Copyright (c) 2026 Briton Kiplangat (Silent Wolf) / WOLF TECH -- modifications
+and additions (including Group Status support) are licensed under the same MIT terms.
+

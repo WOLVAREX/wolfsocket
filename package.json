@@ -1,18 +1,22 @@
 {
-  "name": "baileys",
+  "name": "wolfsocket",
   "type": "module",
-  "version": "7.0.0-rc14",
-  "description": "A WebSockets library for interacting with WhatsApp Web",
+  "version": "1.0.0",
+  "description": "WOLF TECH fork of Baileys with native Group Status (groupStatusMessageV2) support for text, image, video, audio, and sticker posts.",
   "keywords": [
     "whatsapp",
-    "automation"
+    "automation",
+    "baileys",
+    "group-status",
+    "wolf-tech",
+    "wolvarex"
   ],
-  "homepage": "https://github.com/WhiskeySockets/Baileys/",
+  "homepage": "https://github.com/WOLVAREX/wolfsocket",
   "repository": {
-    "url": "git@github.com:WhiskeySockets/Baileys.git"
+    "url": "https://github.com/WOLVAREX/wolfsocket.git"
   },
   "license": "MIT",
-  "author": "Rajeh Taher",
+  "author": "Briton Kiplangat (Silent Wolf) <WOLF TECH>",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
