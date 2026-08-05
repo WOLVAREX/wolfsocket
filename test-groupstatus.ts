@@ -18,7 +18,7 @@ import makeWASocket, {
 	fetchLatestBaileysVersion,
 	makeCacheableSignalKeyStore,
 	useMultiFileAuthState
-} from '../src'
+} from './src'
 import { Boom } from '@hapi/boom'
 import qrcode from 'qrcode-terminal'
 import P from 'pino'
