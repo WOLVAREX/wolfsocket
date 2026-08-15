@@ -39,6 +39,22 @@ await sock.sendGroupStatus(groupJid, { sticker: stickerBuffer })
 
 `groupJid` is a normal group JID (ends in `@g.us`) — the same one you'd pass to `sock.sendMessage()`.
 
+### Sticker compatibility
+
+When a bot receives a sticker and wants to repost it as a group status, it should
+parse the sticker into a supported media format before posting it. Convert static
+stickers to an image (such as PNG), and convert animated stickers to a video (such
+as MP4) so the animation is preserved. Then post the converted media with
+`sendGroupStatus()`:
+
+```js
+// static sticker converted to an image
+await sock.sendGroupStatus(groupJid, { image: imageBuffer })
+
+// animated sticker converted to a video
+await sock.sendGroupStatus(groupJid, { video: videoBuffer, gifPlayback: true })
+```
+
 ## API
 
 ### `sock.sendGroupStatus(jid, content)`
