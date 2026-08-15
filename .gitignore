@@ -21,6 +21,7 @@ node_modules
 output.csv
 Proxy
 test.ts
+dm-test.log
 TestData
 wa-logs*
 coverage

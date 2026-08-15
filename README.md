@@ -39,6 +39,40 @@ await sock.sendGroupStatus(groupJid, { sticker: stickerBuffer })
 
 `groupJid` is a normal group JID (ends in `@g.us`) — the same one you'd pass to `sock.sendMessage()`.
 
+## Reliable DM replies
+
+For direct-message bots, always reply using the incoming message's
+`msg.key.remoteJid`. This may be a phone-number JID (`@s.whatsapp.net`) or a
+Linked Device ID (`@lid`). Do not manually convert the JID or assume that every
+contact uses the phone-number form; the socket uses the incoming JID together
+with its LID mapping and device sessions to route the message correctly.
+
+```js
+sock.ev.on('messages.upsert', async ({ messages, type }) => {
+  if (type !== 'notify') return
+
+  for (const msg of messages) {
+    const jid = msg.key.remoteJid
+    const text = msg.message?.conversation || msg.message?.extendedTextMessage?.text
+    if (!jid || !text || msg.key.fromMe) continue
+
+    if (text.trim() === '!ping') {
+      await sock.sendMessage(jid, { text: 'pong' })
+    }
+  }
+})
+```
+
+When troubleshooting missing DM replies, log the returned message key and
+listen for `messages.update` and `message-receipt.update` events using the same
+message ID. A successful `sendMessage()` call confirms that the socket accepted
+the message; delivery/read updates help confirm what happened afterward.
+
+This repository also contains a local-only diagnostic script named `test.ts`
+(ignored by Git). Run it with `npx tsx test.ts`, then send `!ping`, `!testdm`, or
+`!testdm-one` in a direct chat. The script records the JID form and outgoing
+message updates without becoming part of the published package.
+
 ### Sticker compatibility
 
 When a bot receives a sticker and wants to repost it as a group status, it should
