@@ -1,7 +1,7 @@
 {
   "name": "wolfsocket",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WOLF TECH fork of Baileys with native Group Status (groupStatusMessageV2) support for text, image, video, audio, and sticker posts.",
   "keywords": [
     "whatsapp",
