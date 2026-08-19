@@ -1,4 +1,4 @@
-<h1><img alt="Baileys logo" src="Media/logo.png" height="75"/></h1>
+<h1 align='center'><img alt="wolfsocket logo" src="Media/logo.png" height="75"/></h1>
 
 
 > [!CAUTION]
