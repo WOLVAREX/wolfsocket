@@ -375,8 +375,10 @@ export const decryptMessageNode = (
 				}
 			}
 
-			// if nothing was found to decrypt
-			if (!decryptables && !fullMessage.key?.isViewOnce) {
+			// If nothing was found to decrypt, expose the message as a placeholder.
+			// View-once unavailable messages need this too: the receive pipeline
+			// uses the ciphertext stub to request the real payload from the phone.
+			if (!decryptables) {
 				fullMessage.messageStubType = proto.WebMessageInfo.StubType.CIPHERTEXT
 				fullMessage.messageStubParameters = [NO_MESSAGE_FOUND_ERROR_TEXT]
 			}
