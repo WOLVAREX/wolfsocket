@@ -1,5 +1,11 @@
 # wolfsocket
 
+<p align="center">
+  <img src="./Media/logo.png" alt="wolfsocket logo" width="220">
+</p>
+
+<p align="center">A WOLF TECH maintained fork of Baileys for WhatsApp automation.</p>
+
 A [Baileys](https://github.com/WhiskeySockets/Baileys) fork maintained under **WOLF TECH**, adding native **Group Status** support — posting text, image, video, audio, and sticker updates that are visible only within a specific WhatsApp group (distinct from the regular `status@broadcast` story that goes to your whole contact list).
 
 > This is a fork, not a replacement. Everything in upstream Baileys works exactly the same — `wolfsocket` adds one new socket method on top: `sock.sendGroupStatus()`.
