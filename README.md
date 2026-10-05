@@ -1,7 +1,7 @@
 # wolfsocket
 
 <p align="center">
-  <img src="./Media/logo.png" alt="wolfsocket logo" width="220">
+  <img src="https://github.com/WOLVAREX/wolfsocket/blob/main/Media/logo.png" alt="wolfsocket logo" width="220">
 </p>
 
 <p align="center">A WOLF TECH maintained fork of Baileys for WhatsApp automation.</p>
